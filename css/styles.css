@@ -1,3 +1,11 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 /* Color Palette
 # - color 1
 # - color 2
@@ -23,11 +31,40 @@ body {
 }
 
 img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #ffffff;
+    border: 0;
+}
+
+.content-wrap {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.column-narrow {
+    width: 30%;
+    float: left;
+    padding-right: 3%;
+    min-height: 175px;
+}
+
+.column-wide {
+    width: 70%;
+    float: left;
+    min-height: 225px;
+}
+
+.job-item {
+    overflow: hidden;
+}
+
+.profile-img {
+    width: 235px;
+    height: auto;
+    display: block;
+    border-radius: 0;
+    margin-left: -8px;
+    margin-right: 10px;
 }
 
 h1,
@@ -47,10 +84,9 @@ h2 {
     font-weight: 700;
 }
 
-main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+header h1,
+header h2 {
+    margin: 0;
 }
 
 
@@ -61,13 +97,20 @@ header,
 footer {
     background: #E07A5F;
     color: #ffffff;
+}
+
+footer {
     text-align: center;
-    padding: 24px 16px;
 }
 
 footer a {
     color: #ffffff;
     margin: 0 8px;
+}
+
+.contact-info a {
+    padding: 10px;
+    display: inline-block;
 }
 
 
@@ -77,9 +120,6 @@ footer a {
 
 .work-experience {
     background: #81B29A;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
 }
 
 
@@ -89,7 +129,5 @@ footer a {
 
 .education {
     background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+    border-top: 1px solid #ddd;
 }
